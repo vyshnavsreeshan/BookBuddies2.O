@@ -1,0 +1,33 @@
+name: bookbuddies
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  animated_text_kit: ^4.2.2
+  cloud_firestore: ^4.12.2
+  firebase_auth: ^4.12.1
+  firebase_core: ^2.21.0
+  firebase_storage: ^11.4.1
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.5
+  fpdart: ^1.1.0
+  google_sign_in: ^6.1.5
+  page_transition: ^2.1.0
+  routemaster: ^1.0.1
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/google.png
+    - assets/landingPage.gif
+  uses-material-design: true
