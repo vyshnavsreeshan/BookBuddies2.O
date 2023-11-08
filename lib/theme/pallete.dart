@@ -45,6 +45,11 @@ class Pallete {
       iconTheme: IconThemeData(
         color: brown,
       ),
+      titleTextStyle: TextStyle(
+        color: Color.fromRGBO(45, 29, 20, 1),
+        fontSize: 20,
+        fontWeight: FontWeight.w500,
+      ),
     ),
     drawerTheme: const DrawerThemeData(
       backgroundColor: cream,
