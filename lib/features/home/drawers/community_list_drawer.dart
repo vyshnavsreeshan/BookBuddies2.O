@@ -12,6 +12,10 @@ class CommunityListDrawer extends ConsumerWidget {
   void navigateToCreateCommunity(BuildContext context) {
     Routemaster.of(context).push('/create-community');
   }
+  
+  void navigateToCommunity(BuildContext context, Community community) {
+    Routemaster.of(context).push('/r/${community.name}');
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,8 +38,10 @@ class CommunityListDrawer extends ConsumerWidget {
                             leading: CircleAvatar(
                               backgroundImage: NetworkImage(community.avatar),
                             ),
-                            title: Text('c/${community.name}'),
-                            onTap: () {},
+                            title: Text('r/${community.name}'),
+                            onTap: () {
+                              navigateToCommunity(context, community);
+                            },
                           );
                         },
                       ),
