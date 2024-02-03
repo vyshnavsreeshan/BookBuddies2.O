@@ -1,4 +1,5 @@
 import 'package:bookbuddies/features/auth/controller/auth_controller.dart';
+import 'package:bookbuddies/features/home/delegates/search_community_delegate.dart';
 import 'package:bookbuddies/features/home/drawers/community_list_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,6 +9,10 @@ class HomeSreen extends ConsumerWidget {
 
   void displayDrawer(BuildContext context) {
     Scaffold.of(context).openDrawer();
+  }
+
+  void displayEndDrawer(BuildContext context) {
+    Scaffold.of(context).openEndDrawer();
   }
 
   @override
@@ -29,7 +34,9 @@ class HomeSreen extends ConsumerWidget {
         }),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showSearch(context: context, delegate: SearchCommunityDelegate(ref));
+            },
             icon: const Icon(Icons.search),
           ),
         ],
