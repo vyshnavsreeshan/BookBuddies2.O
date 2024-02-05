@@ -16,6 +16,10 @@ class CommunityScreen extends ConsumerWidget {
   void navigateToModTools(BuildContext context) {
     Routemaster.of(context).push('/mod-tools/$name');
   }
+ 
+  void joinCommunity(WidgetRef ref, Community community, BuildContext context) {
+    ref.read(communityControllerProvider.notifier).joinCommunity(community, context);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -64,7 +68,7 @@ class CommunityScreen extends ConsumerWidget {
                         child: const Text('Mod Tools'),
                       )
                       :OutlinedButton(
-                        onPressed: () {}, 
+                        onPressed: () => joinCommunity(ref, community, context), 
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),

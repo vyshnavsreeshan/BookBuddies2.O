@@ -1,6 +1,7 @@
 import 'package:bookbuddies/features/auth/controller/auth_controller.dart';
 import 'package:bookbuddies/features/home/delegates/search_community_delegate.dart';
 import 'package:bookbuddies/features/home/drawers/community_list_drawer.dart';
+import 'package:bookbuddies/features/home/drawers/profile_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -28,7 +29,7 @@ class HomeSreen extends ConsumerWidget {
         centerTitle: true,
         leading: Builder(builder: (context) {
           return IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: () => displayDrawer(context),
           );
         }),
@@ -39,9 +40,19 @@ class HomeSreen extends ConsumerWidget {
             },
             icon: const Icon(Icons.search),
           ),
+          Builder(
+            builder: (context) {
+              return IconButton(
+                icon: CircleAvatar(
+                  backgroundImage: NetworkImage(user.profilePic),
+                ),
+                onPressed: () => displayEndDrawer(context),
+              );
+            }),
         ],
       ),
-      drawer: CommunityListDrawer(),
+      drawer: const CommunityListDrawer(),
+      endDrawer: const ProfileDrawer(),
     );
   }
 }

@@ -17,6 +17,12 @@ class ProfileDrawer extends ConsumerWidget {
               backgroundImage: NetworkImage(user.profilePic),
               radius: 70,
             ),
+            const SizedBox(height: 10,),
+            Text('u/${user.name}', style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+           ),
           ],
         ),
       ),

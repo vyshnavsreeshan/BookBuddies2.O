@@ -27,9 +27,7 @@ class CommunityRepository {
     } catch (e) {
       return left(
         Failure(
-          e.toString(),
-        ),
-      );
+          e.toString(),),);
     }
   }
 
@@ -69,6 +67,5 @@ class CommunityRepository {
 
   CollectionReference get _communities =>
       _firestore.collection(FirebaseConstants.communitiesCollection);
-
 
 }
