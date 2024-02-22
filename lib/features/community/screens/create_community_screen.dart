@@ -1,6 +1,5 @@
 import 'package:bookbuddies/core/common/loader.dart';
 import 'package:bookbuddies/features/auth/controller/community_controller.dart';
-import 'package:bookbuddies/features/auth/repository/community_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

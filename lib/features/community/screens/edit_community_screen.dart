@@ -1,6 +1,5 @@
 import 'package:bookbuddies/core/common/error_text.dart';
 import 'package:bookbuddies/core/common/loader.dart';
-import 'package:bookbuddies/core/constants/constants.dart';
 import 'package:bookbuddies/features/community/controller/community_controller.dart';
 import 'package:bookbuddies/theme/pallete.dart';
 import 'package:flutter/material.dart';
