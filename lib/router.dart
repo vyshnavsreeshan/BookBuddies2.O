@@ -5,6 +5,7 @@ import 'package:bookbuddies/features/community/screens/edit_community_screen.dar
 import 'package:bookbuddies/features/community/screens/mod_tools_screen.dart';
 import 'package:bookbuddies/features/home/screens/home_screen.dart';
 import 'package:bookbuddies/features/auth/screen/login_screen.dart';
+import 'package:bookbuddies/features/post/screens/add_post_type_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:routemaster/routemaster.dart';
 
@@ -39,6 +40,11 @@ final loggedInRoute = RouteMap(routes: {
         '/add-mods/:name': (routeData) => MaterialPage(
         child: AddModsScreen(
         name: routeData.pathParameters['name']!,
+      ),
+    ),
+        '/add-post/:type': (routeData) => MaterialPage(
+        child: AddPostTypeScreen(
+        type: routeData.pathParameters['type']!,
       ),
     ),
 });
